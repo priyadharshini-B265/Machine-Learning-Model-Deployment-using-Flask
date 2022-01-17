@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Luxurious+Roman&display=swap" rel="stylesheet">
+    
+    <style>
+       body {
+           margin: 0;
+           font-family: 'Luxurious Roman', cursive;
+           word-spacing: 4px;
+           
+       }
+
+        #btn {
+            font-size: 18px;
+            padding: 10px;
+            color: white;
+            background-color:rgb(204, 62, 110) ;
+            border-radius: 10px;
+            width: 50%;
+            margin-left: 25%;
+            border: none;
+            font-family: 'Luxurious Roman', cursive;
+           
+        }
+
+        #btn :hover {
+            background-color:rgb(238, 161, 161) ;
+            cursor: pointer;
+        }
+
+        #btn-c {
+            font-size: 18px;
+            padding: 10px;
+            color: white;
+            background-color:rgb(204, 62, 110) ;
+            border-radius: 10px;
+            font-family: 'Luxurious Roman', cursive;
+        }
+
+       
+
+#form {
+    position: absolute;
+    align-items: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: lightcoral;
+    padding: 50px;
+    padding-left: 180px;
+    padding-right: 180px;
+    border: 5px solid rgb(204, 62, 110);
+    border-radius:  10px 60px;
+    align-items: center;
+    
+}
+#form-full {
+    background-image: url('https://nmgprod.s3.amazonaws.com/media/files/ac/8f/ac8fedfcc7a137703c4e81de6c84e65d/cover_image_1615470651.jpg.760x400_q85_crop_upscale.jpg');
+   min-height: 650px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+
+}
+
+#text {
+    width:300px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#nav {
+    background-color: rgb(204, 62, 110);
+    padding: 1px;
+    color: white;
+    
+}
+
+
+#temp {
+    background-color:rgb(204, 62, 110); 
+    color: white;
+    padding: 8px;
+    width: 100%;
+    border-radius: 30px;
+} 
+
+#icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 8px;
+    
+}
+
+
+    </style>
+    <title>Machine Learning</title>
+</head>
+<body>
+    <nav  id="nav">
+        <img id="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHAWFy4FxH4PwoX2vuuHD6JrryLBw1DymZNA&usqp=CAU" alt="" srcset="">
+        <h3>ICE CREAM SHOP REVENUE</h3>
+    </nav>
+    <div id="form-full">
+        <form id="form" action="{{url_for('predict')}}" method="post"> <!--jinja template -->
+            <h3 id="temp">Enter The Temperature Here !!!</h3>
+            <input id ="text" type="text" name="temperature" placeholder="Enter the Temperature"></input>
+            <button id="btn-c">C</button>
+            <br><br><button id="btn" type="submit">Predict Revenue</button>
+    </form>
+</div>
+<div id="result">
+    <h3><b>{{prediction_test}}</b></h3>
+</div>
+</body>
+</html>

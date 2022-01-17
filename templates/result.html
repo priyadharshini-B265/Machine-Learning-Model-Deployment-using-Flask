@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Luxurious+Roman&display=swap" rel="stylesheet">
+    
+    <style>
+       body {
+           margin: 0;
+           font-family: 'Luxurious Roman', cursive;
+           word-spacing: 4px;
+           
+       }
+
+       #bg {
+background-image: url('https://nmgprod.s3.amazonaws.com/media/files/ac/8f/ac8fedfcc7a137703c4e81de6c84e65d/cover_image_1615470651.jpg.760x400_q85_crop_upscale.jpg');
+   min-height: 650px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+
+}
+
+#nav {
+    background-color: rgb(204, 62, 110);
+    padding: 1px;
+    color: white;
+    
+}
+
+
+
+
+#icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 8px;
+    
+}
+
+#result {
+    position: absolute;
+    align-items: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: lightcoral;
+   padding-top: 60px;
+   padding-bottom:60px ;
+    padding-left: 100px;
+    padding-right: 100px;
+    border: 5px solid rgb(204, 62, 110);
+    border-radius:  50px 10px;
+    align-items: center;
+}
+
+#result h3 {
+    color: white;
+    background-color:rgb(204, 62, 110) ;
+    padding: 25px;
+    border-radius: 30px;
+}
+
+
+    </style>
+    <title>Machine Learning</title>
+</head>
+<body>
+    <nav  id="nav">
+        <img id="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHAWFy4FxH4PwoX2vuuHD6JrryLBw1DymZNA&usqp=CAU" alt="" srcset="">
+        <h3>ICE CREAM SHOP REVENUE RESULT</h3>
+    </nav>
+    <div id="bg">
+<div id="result">
+    <h3><b>{{prediction_test}}</b></h3>
+</div>
+</div>
+</body>
+</html>
